@@ -1,0 +1,112 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class MatrixMultiUnits {
+	private int rowsA, rowsB, columnsA, columnsB;
+
+	private int matrixA [][], matrixB [][], matrixC [][];
+	private myThread[] threadPool;
+	private MatrixAccel accelMulti;
+	
+	private int nCore, nRows;
+	/**Constructor of application**/
+	MatrixMultiUnits(int rwA, int clA, int rwB, int clB){
+		rowsA = rwA;
+		columnsA = clA;
+		rowsB = rwB;
+		columnsB = clB;
+		nCore = Runtime.getRuntime().availableProcessors();
+		nRows = rowsA/nCore;
+		buildMatrices();
+	}
+	
+	/**Expects the input to the sizes of the arrays for application**/
+	public static void main(String[] args){
+		Scanner scan = new Scanner(System.in);		
+
+		int arg1 = Integer.parseInt(scan.nextLine());
+		int arg2 = Integer.parseInt(scan.nextLine());
+		int arg3 = Integer.parseInt(scan.nextLine());
+		int arg4 = Integer.parseInt(scan.nextLine());
+		MatrixMultiUnits mmt = new MatrixMultiUnits(arg1,arg2,arg3,arg4);
+		mmt.calculate();
+	}
+
+	/**Generation of arrays**/
+	private void buildMatrices(){
+
+		matrixA = new int [rowsA][columnsA];
+		matrixB = new int [rowsB][columnsB];
+
+		Random generator = new Random(15);
+		for(int i=0; i<rowsA; i++){
+			for(int j=0; j<columnsA; j++){
+				matrixA[i][j] = generator.nextInt(99)+1;
+			}
+		}
+		for(int i=0; i<rowsB; i++){
+			for(int j=0; j<columnsB; j++){
+				matrixB[i][j] = generator.nextInt(99)+1;
+			}
+		}
+		matrixC = new int [rowsA][columnsB];
+	}
+	
+	/**Instantiates and triggers the thread group 
+	 * to calculate the resulting matrix**/
+	private void calculate(){
+		//Number of threads equals of the rows
+		threadPool = new myThread[rowsA];
+		//Instantiates acelerator object for link GPU
+		accelMulti = new MatrixAccel(nRows);  
+		accelMulti.setMatrix(matrixA, matrixB);
+		
+		long start = System.nanoTime();
+
+		for(int i=0; i<rowsA; i++){
+			threadPool[i] = new myThread(i);
+			threadPool[i].start();
+			try{
+			   threadPool[i].join();
+			}catch (InterruptedException e){
+			
+			}
+		}
+
+		long end = System.nanoTime();
+		double time = (end-start)/1000000.0;
+		
+		System.out.println("\n Multiplication took " + time + " milliseconds.");
+					
+		matrixC = accelMulti.getResult();
+		accelMulti.clearAll();
+		printResult();
+		
+	}
+
+	private void printResult() {
+	    for(int i=0; i<rowsA; i++){
+            for(int j=0; j<columnsB; j++){
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+         }
+	}
+	
+	/** Class for instantiation of threads that trigger units in GPU device**/
+	private static class myThread extends Thread{
+		int index;
+		MatrixAccell.Multiply accelMultiUnit;
+		
+		myThread(int index){
+			this.index = index;
+			accelMultiUnit = unit Multiply <nCore> for accelMulti;
+		}
+		/* call of method kernel on the acelerator object  for the partial 
+		solution calculation*/
+		public void run(){
+			accelMulti.multiplyBlockLine();
+		}
+	}
+}
+
