@@ -1,0 +1,135 @@
+
+real	2m48.805s
+user	2m0.604s
+sys	0m46.676s
+
+real	2m48.554s
+user	2m1.172s
+sys	0m46.756s
+
+real	2m48.506s
+user	2m1.752s
+sys	0m46.132s
+
+real	2m48.583s
+user	2m0.852s
+sys	0m47.100s
+
+real	2m48.573s
+user	2m0.760s
+sys	0m47.136s
+
+
+4threads ------
+
+
+real	2m48.924s
+user	3m6.228s
+sys	6m10.392s
+
+real	2m49.578s
+user	3m12.956s
+sys	6m16.020s
+
+real	2m49.489s
+user	3m11.368s
+sys	6m16.536s
+Error misaligned address at line 273 in file CompleteEnumerationStream.cu
+
+real	1m44.584s
+user	1m48.368s
+sys	4m25.320s
+
+real	2m47.888s
+user	3m4.052s
+sys	6m15.416s
+
+real	2m46.915s
+user	3m5.756s
+sys	6m11.292s
+
+real	2m46.526s
+user	3m2.584s
+sys	6m2.956s
+
+
+real	2m47.329s
+user	3m12.496s
+sys	6m7.876s
+
+real	2m48.328s
+user	3m11.676s
+sys	6m11.604s
+
+real	2m48.359s
+user	3m8.664s
+sys	6m14.480s
+Error misaligned address at line 273 in file CompleteEnumerationStream.cu
+
+real	1m41.021s
+user	1m41.888s
+sys	4m19.364s
+
+real	2m48.296s
+user	3m11.404s
+sys	6m11.008s
+
+real	2m48.316s
+user	3m11.316s
+sys	6m11.608s
+
+real	2m47.836s
+user	3m10.396s
+sys	6m11.188s
+
+real	2m48.318s
+user	3m10.600s
+sys	6m12.568s
+
+real	2m48.327s
+user	3m6.244s
+sys	6m14.512s
+
+real	2m48.288s
+user	3m11.084s
+sys	6m10.572s
+
+real	2m48.957s
+user	3m6.352s
+sys	6m14.880s
+
+real	2m49.123s
+user	3m12.564s
+sys	6m10.528s
+
+real	2m49.042s
+user	3m12.260s
+sys	6m10.808s
+
+real	2m49.045s
+user	3m9.556s
+sys	6m12.464s
+
+real	2m49.006s
+user	3m8.536s
+sys	6m14.016s
+
+real	2m48.993s
+user	3m7.960s
+sys	6m13.728s
+
+real	2m49.009s
+user	3m7.452s
+sys	6m14.324s
+
+real	2m49.028s
+user	3m11.732s
+sys	6m10.872s
+
+real	2m49.060s
+user	3m8.028s
+sys	6m13.432s
+
+real	2m49.040s
+user	3m7.544s
+sys	6m13.576s

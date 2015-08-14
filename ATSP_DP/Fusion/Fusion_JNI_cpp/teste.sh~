@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for contador in {1..32}
+do 
+       (time (time java CompEnumUnits_4threads < 12.txt) 2>>sai12.txt)
+done
+

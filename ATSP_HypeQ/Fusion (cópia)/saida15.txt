@@ -1,0 +1,100 @@
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+./teste.sh: linha 38: 15.txt: Arquivo ou diretório não encontrado
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s

@@ -1,0 +1,98 @@
+1- compilando java:
+javac *.java
+javah DFS_Solving$DFS_intermediario
+
+2- Junta os .h em um só manualmente e contrói a proxy.c com base neles. 
+
+3- Ulizando o Makefile (Makefile_old) do estudos anteriores:
+################################################################################################
+anderson@admcad-desktop:~/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI$ java DFS_main < 11.txt
+
+Nivel inicial: 5
+
+Quantidade de prefixos no nivel inicial: 10
+
+Quantidade de prefixos por raiz: 1
+
+Quantidade de prefixos no nivel desejado: 10
+Exception in thread "main" java.lang.UnsatisfiedLinkError: /home/anderson/Dropbox/specialIssue/ATSP_DP/
+Fusion/Fusion_JNI/libdfs.so: /home/anderson/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI/libdfs.so: 
+undefined symbol: __cudaRegisterLinkedBinary_46_tmpxft_00000fe0_00000000_6_DFS_Solving_cpp1_ii_9b25816d
+        at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+        at java.lang.ClassLoader.loadLibrary1(ClassLoader.java:1965)
+        at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1890)
+        at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1880)
+        at java.lang.Runtime.loadLibrary0(Runtime.java:849)
+        at java.lang.System.loadLibrary(System.java:1088)
+        at DFS_Solving.<clinit>(DFS_Solving.java:22)
+        at DFS_main.call_DFSIntermediario(DFS_main.java:128)
+        at DFS_main.<init>(DFS_main.java:28)
+        at DFS_main.main(DFS_main.java:146)
+################################################################################################
+
+Aplicando esse make compila, utilizando o -dlink, porém surge um erro referente a undefined symbol: __fatbinwrap_66_
+
+link.o : DFS_Solving.cu DFS_Solving.h
+	nvcc -m32 -arch=sm_35 -dc -Xcompiler '-fPIC' -lcudadevrt -rdc=true DFS_Solving.cu 
+	nvcc -m32 -arch=sm_35 -Xcompiler '-fPIC' -dlink -lcudadevrt DFS_Solving.o -o link.o
+	
+libdfs.so : link.o
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -shared -Wl,-soname,libdfs.so -o libdfs.so  DFS_Solving.o link.o -L/usr/local/cuda/lib -Wall -lcudart 
+	
+testmain : proxy.c  libdfs.so
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -c proxy.c
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -o proxy  -L.  -ldl -Wl,-rpath,.   -ldfs -L/usr/local/cuda/lib -lcudart proxy.o 
+	
+clean :
+	rm -f *.o *.so
+        
+#########################################################        
+anderson@admcad-desktop:~/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI$ java DFS_main < 11.txt
+
+Nivel inicial: 5
+
+Quantidade de prefixos no nivel inicial: 10
+
+Quantidade de prefixos por raiz: 1
+
+Quantidade de prefixos no nivel desejado: 10
+Exception in thread "main" java.lang.UnsatisfiedLinkError: /home/anderson/Dropbox/specialIssue/ATSP_DP/
+Fusion/Fusion_JNI/libdfs.so: /home/anderson/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI/libdfs.so: 
+undefined symbol: __fatbinwrap_66_tmpxft_000015c6_00000000_12_cuda_device_runtime_compute_50_cpp1_ii_5f6993ef
+        at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+        at java.lang.ClassLoader.loadLibrary1(ClassLoader.java:1965)
+        at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1890)
+        at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1880)
+        at java.lang.Runtime.loadLibrary0(Runtime.java:849)
+        at java.lang.System.loadLibrary(System.java:1088)
+        at DFS_Solving.<clinit>(DFS_Solving.java:22)
+        at DFS_main.call_DFSIntermediario(DFS_main.java:128)
+        at DFS_main.<init>(DFS_main.java:28)
+        at DFS_main.main(DFS_main.java:146)
+######################################################### 
+
+Voltou para o erro anterior:
+
+anderson@admcad-desktop:~/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI$ java -Djava.library.path=. DFS_main < 11.txt
+
+Nivel inicial: 5
+
+Quantidade de prefixos no nivel inicial: 5040
+
+Quantidade de prefixos por raiz: 30
+
+Quantidade de prefixos no nivel desejado: 151200
+Exception in thread "main" java.lang.UnsatisfiedLinkError: /home/anderson/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI/libdfs.so: /home/anderson/Dropbox/specialIssue/ATSP_DP/Fusion/Fusion_JNI/libdfs.so: undefined symbol: __cudaRegisterLinkedBinary_46_tmpxft_00000fe0_00000000_6_DFS_Solving_cpp1_ii_9b25816d
+        at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+        at java.lang.ClassLoader.loadLibrary1(ClassLoader.java:1965)
+        at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1890)
+        at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1880)
+        at java.lang.Runtime.loadLibrary0(Runtime.java:849)
+        at java.lang.System.loadLibrary(System.java:1088)
+        at DFS_Solving.<clinit>(DFS_Solving.java:22)
+        at DFS_main.call_DFSIntermediario(DFS_main.java:130)
+        at DFS_main.<init>(DFS_main.java:30)
+        at DFS_main.main(DFS_main.java:148)
+
+
+

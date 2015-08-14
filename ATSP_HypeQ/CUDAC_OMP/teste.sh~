@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for contador in {1..32}
+do 
+       (time (time ./CompleteEnumerationStream < 14.txt) 2>>sai14.txt)
+done
+

@@ -1,0 +1,19 @@
+libdfs.so : link.o
+	gcc -malign-double -g -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -c proxy.c
+	
+link.o : DFS_Solving.cu DFS_Solving.h
+	nvcc -m32 -arch=sm_35 -dc -Xcompiler '-fPIC' -lcudadevrt -rdc=true DFS_Solving.cu 
+	nvcc -m32 -arch=sm_35 -Xcompiler '-fPIC' -dlink -lcudadevrt DFS_Solving.o -o link.o
+
+testmain : proxy.cpp  libdfs.so
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -shared -Wl,-soname,libdfs.so -o libdfs.so  DFS_Solving.o link.o proxy.o -L/usr/local/cuda/lib -Wall -lcudart
+clean :
+	rm -f *.o *.so
+	
+
+
+#nvcc -x cu -arch=sm_35 -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -I. -dc proxy.cpp -o proxy.o
+#nvcc -x cu -arch=sm_35 -I. -dc dfs_final.cu -o dfs_final.o
+#nvcc -arch=sm_35 -dlink -lcudadevrt proxy.o dfs_final.o -o gpuCode.o
+#g++ -shared -Wl,-soname,libdfs.so -o libdfs.so proxy.o dfs_final.o gpuCode.o -L/usr/local/cuda/lib -Wall -lcudart
+#java -Djava.library.path=. DFS_main < 11.txt

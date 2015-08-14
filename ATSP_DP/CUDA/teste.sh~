@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for contador in {1..32}
+do 
+       (time (time ./a < 12.txt) 2>>sai12.txt)
+done
+
+for contador in {1..32}
+do 
+       (time (time ./a < 13.txt) 2>>sai13.txt)
+done

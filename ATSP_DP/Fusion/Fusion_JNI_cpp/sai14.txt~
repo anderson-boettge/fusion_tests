@@ -1,0 +1,295 @@
+
+
+Nivel inicial: 5
+
+Quantidade de prefixos no nivel inicial: 17160
+
+Quantidade de prefixos por raiz: 72
+
+Quantidade de prefixos no nivel desejado: 1235520
+
+Quantidade de solucoes global:  1932053504 Otimo global:  1424
+
+
+qtd_prefixos_segundo_dfs setData:  1235520
+qtd_prefixos_segundo_dfs get:  1235520
+
+
+real	0m5.068s
+user	0m2.960s
+sys	0m1.560s
+
+real	0m5.878s
+user	0m3.628s
+sys	0m1.684s
+
+real	0m1.003s
+user	0m0.064s
+sys	0m0.392s
+
+real	0m1.014s
+user	0m0.060s
+sys	0m0.416s
+
+real	0m0.988s
+user	0m0.052s
+sys	0m0.404s
+
+real	0m0.984s
+user	0m0.052s
+sys	0m0.392s
+
+real	0m1.000s
+user	0m0.056s
+sys	0m0.400s
+
+real	0m0.984s
+user	0m0.060s
+sys	0m0.412s
+
+real	0m1.002s
+user	0m0.056s
+sys	0m0.396s
+
+real	0m0.983s
+user	0m0.052s
+sys	0m0.416s
+
+real	0m0.982s
+user	0m0.064s
+sys	0m0.404s
+
+real	0m0.984s
+user	0m0.048s
+sys	0m0.388s
+
+real	0m0.985s
+user	0m0.052s
+sys	0m0.420s
+
+real	0m1.017s
+user	0m0.052s
+sys	0m0.404s
+
+real	0m0.987s
+user	0m0.052s
+sys	0m0.412s
+
+real	0m0.985s
+user	0m0.056s
+sys	0m0.404s
+
+real	0m0.983s
+user	0m0.052s
+sys	0m0.420s
+
+real	0m1.017s
+user	0m0.072s
+sys	0m0.396s
+
+real	0m0.983s
+user	0m0.064s
+sys	0m0.420s
+
+real	0m0.985s
+user	0m0.060s
+sys	0m0.388s
+
+real	0m0.984s
+user	0m0.056s
+sys	0m0.404s
+
+real	0m1.002s
+user	0m0.052s
+sys	0m0.424s
+
+real	0m1.001s
+user	0m0.052s
+sys	0m0.408s
+
+real	0m1.003s
+user	0m0.052s
+sys	0m0.408s
+
+real	0m1.016s
+user	0m0.052s
+sys	0m0.412s
+
+real	0m1.018s
+user	0m0.048s
+sys	0m0.408s
+
+real	0m0.984s
+user	0m0.056s
+sys	0m0.412s
+
+real	0m1.001s
+user	0m0.056s
+sys	0m0.416s
+
+real	0m0.985s
+user	0m0.056s
+sys	0m0.396s
+
+real	0m1.000s
+user	0m0.064s
+sys	0m0.408s
+
+real	0m0.984s
+user	0m0.052s
+sys	0m0.392s
+
+real	0m0.984s
+user	0m0.052s
+sys	0m0.408s
+
+real	0m0.981s
+user	0m0.056s
+sys	0m0.396s
+
+real	0m1.007s
+user	0m0.052s
+sys	0m0.412s
+
+real	0m1.074s
+user	0m0.064s
+sys	0m0.480s
+
+real	0m1.094s
+user	0m0.060s
+sys	0m0.496s
+Invalid initial heap size: -Xms=1024
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+
+real	0m0.006s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m4.515s
+user	0m3.328s
+sys	0m1.200s
+
+real	0m4.547s
+user	0m3.544s
+sys	0m1.020s
+
+real	0m4.478s
+user	0m3.312s
+sys	0m1.184s
+
+real	0m4.539s
+user	0m3.612s
+sys	0m0.940s
+
+real	0m4.501s
+user	0m3.440s
+sys	0m1.076s
+
+real	0m4.472s
+user	0m3.352s
+sys	0m1.132s
+
+real	0m4.526s
+user	0m3.376s
+sys	0m1.168s
+
+real	0m4.510s
+user	0m3.392s
+sys	0m1.136s
+
+real	0m4.485s
+user	0m3.464s
+sys	0m1.036s
+
+real	0m4.538s
+user	0m3.244s
+sys	0m1.312s
+
+real	0m4.498s
+user	0m3.456s
+sys	0m1.060s
+
+real	0m4.480s
+user	0m3.604s
+sys	0m0.892s
+
+real	0m4.525s
+user	0m3.708s
+sys	0m0.832s
+
+real	0m4.586s
+user	0m3.484s
+sys	0m1.120s
+
+real	0m4.571s
+user	0m3.668s
+sys	0m0.920s
+
+real	0m4.596s
+user	0m3.732s
+sys	0m0.880s
+
+real	0m4.581s
+user	0m3.424s
+sys	0m1.176s
+
+real	0m4.483s
+user	0m3.540s
+sys	0m0.960s
+
+real	0m4.553s
+user	0m3.676s
+sys	0m0.888s
+
+real	0m4.584s
+user	0m3.872s
+sys	0m0.724s
+
+real	0m4.500s
+user	0m3.792s
+sys	0m0.724s
+
+real	0m4.551s
+user	0m3.868s
+sys	0m0.696s
+
+real	0m4.600s
+user	0m3.380s
+sys	0m1.232s
+
+real	0m4.507s
+user	0m3.828s
+sys	0m0.696s
+
+real	0m4.554s
+user	0m3.824s
+sys	0m0.744s
+
+real	0m4.620s
+user	0m3.728s
+sys	0m0.908s
+
+real	0m4.590s
+user	0m3.912s
+sys	0m0.688s
+
+real	0m4.657s
+user	0m3.848s
+sys	0m0.820s
+
+real	0m4.714s
+user	0m3.380s
+sys	0m1.348s
+
+real	0m4.659s
+user	0m3.972s
+sys	0m0.700s
+
+real	0m4.656s
+user	0m3.964s
+sys	0m0.708s
+
+real	0m4.697s
+user	0m3.696s
+sys	0m1.016s

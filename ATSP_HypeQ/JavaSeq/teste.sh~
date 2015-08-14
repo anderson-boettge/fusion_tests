@@ -1,0 +1,11 @@
+#!/bin/bash
+rm -f saida*.txt
+
+for contador in $(seq $1)
+  do 
+(time (time java EnumerationDFS < 12.txt) 2>> saida12.txt)
+
+sleep 1;
+
+done
+

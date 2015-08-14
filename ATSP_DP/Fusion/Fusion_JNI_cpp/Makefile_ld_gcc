@@ -1,0 +1,13 @@
+libdfs.so : link.o
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -shared -Wl,-soname,libdfs.so -o libdfs.so  DFS_Solving.o link.o -L/usr/local/cuda/lib -Wall -lcudart 
+
+link.o : DFS_Solving.cu DFS_Solving.h
+	nvcc -m32 -arch=sm_35 -dc -Xcompiler '-fPIC' -lcudadevrt -rdc=true DFS_Solving.cu 
+	nvcc -m32 -arch=sm_35 -Xcompiler '-fPIC' -dlink -lcudadevrt DFS_Solving.o -o link.o
+
+testmain : proxy.c  libdfs.so
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -c proxy.c
+	gcc -I/usr/lib/jvm/java-7-openjdk-i386/include -I/usr/lib/jvm/java-7-openjdk-i386/include/linux -o proxy  -L. -ldl -Wl,-rpath,. -ldfs -L/usr/local/cuda/lib -lcudart proxy.o 
+	
+clean :
+	rm -f *.o *.so

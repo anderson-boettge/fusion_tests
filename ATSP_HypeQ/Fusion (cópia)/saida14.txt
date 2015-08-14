@@ -1,0 +1,81 @@
+
+real	0m18.491s
+user	0m13.128s
+sys	0m5.384s
+
+real	0m18.485s
+user	0m13.488s
+sys	0m5.004s
+
+real	0m18.464s
+user	0m13.376s
+sys	0m5.088s
+
+real	0m18.271s
+user	0m12.956s
+sys	0m5.340s
+
+real	0m18.170s
+user	0m12.876s
+sys	0m5.308s
+
+real	0m18.052s
+user	0m12.856s
+sys	0m5.212s
+
+real	0m18.054s
+user	0m12.888s
+sys	0m5.192s
+
+real	0m18.044s
+user	0m13.028s
+sys	0m5.032s
+
+real	0m18.040s
+user	0m12.876s
+sys	0m5.184s
+
+real	0m18.042s
+user	0m12.876s
+sys	0m5.192s
+
+real	0m15.000s
+user	0m10.640s
+sys	0m4.424s
+
+real	0m18.054s
+user	0m12.816s
+sys	0m5.256s
+
+real	0m18.045s
+user	0m12.960s
+sys	0m5.096s
+Error the launch timed out and was terminated at line 269 in file CompleteEnumerationStream.cu
+
+real	0m15.798s
+user	0m2.792s
+sys	0m5.128s
+
+real	0m18.049s
+user	0m12.848s
+sys	0m5.208s
+
+real	0m18.051s
+user	0m12.660s
+sys	0m5.396s
+
+real	0m18.043s
+user	0m12.752s
+sys	0m5.300s
+
+real	0m18.046s
+user	0m12.808s
+sys	0m5.240s
+
+real	0m18.052s
+user	0m12.968s
+sys	0m5.104s
+
+real	0m18.048s
+user	0m12.720s
+sys	0m5.336s

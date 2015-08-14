@@ -1,0 +1,7 @@
+
+nvcc -arch=sm_35 -rdc=true myprog.cu -lcudadevrt -o myprog.o
+
+nvcc -arch=sm_35 myprog.o -lcudadevrt -o myprog
+
+USE ESTE: nvcc -arch=sm_35 -lcudadevrt -rdc=true testeDP.cu 
+
